@@ -23,5 +23,7 @@ services:
       MYSQL_DATABASE: "${COMPOSE_MYSQL_DATABASE}"
       MYSQL_USER: "${COMPOSE_MYSQL_USER}"
       MYSQL_PASSWORD: "${COMPOSE_MYSQL_PASSWORD}"
+    ports:
+      - "${COMPOSE_DB_PORT}:3306"
     volumes:
       - ./mysql/data:/var/lib/mysql
